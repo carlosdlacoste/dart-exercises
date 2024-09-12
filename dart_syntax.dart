@@ -4,4 +4,9 @@ main(){
   int numero3 = 5; // int se utiliza para declarar variables numericas de tipo entero
   double numero4 = 3.5; // double se utiliza para declarar variables numericas de tipo decimal
   print("Hola $numero");
+
+
+  double age = 5;
+  double ageHuman = age * 7;
+  print("Edad del gato: $ageHuman");
 }
