@@ -1,6 +1,19 @@
 
+String lifeAge(double age) {
+  if(age < 18){
+    return "Niño";
+  }
+  else if(age < 60){
+    return "Adulto";
+  }
+  else{
+    return "Anciano";
+  }
+}
+
 double humanAge(double age){  //las funciones en dart deben llevar el tipo de dato que se desea retornar, en este caso como es un dato decimal usamos double antes del nombre de la funcion
-  return age * 7;
+  const factor = 7;  // las constantes en dart se definen con const
+  return age * factor;
 }
 
 main(){
@@ -14,4 +27,5 @@ main(){
   double age = 5;
   double ageHuman = age * 7;
   print("Edad del gato: ${humanAge(6)}");  //cuando se va imprimir una funcion a diferencia de una variable se debe colocar el nombre de la funcion entre llaves luego del signo dolar
+  print("Edad del gato: ${lifeAge(humanAge(6))}");
 }
