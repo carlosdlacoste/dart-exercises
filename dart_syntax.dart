@@ -44,4 +44,21 @@ main(){
   print("Edad del gato: ${humanAge(6)}");  //cuando se va imprimir una funcion a diferencia de una variable se debe colocar el nombre de la funcion entre llaves luego del signo dolar
   print("Edad del gato: ${lifeAge(humanAge(6))}");
   print("Niño: ${ageRange("Niño")}");
+
+  for(var i = 0; i < 20; i++){
+    //cuando el if tiene una sola instruccion no necesita llaves
+    if(i % 2 == 0) continue; // sentencia continue sirve para saltarnos todas esas iteraciones que cumplan con la condicion propuesta y que la ejecucion siga adelante
+    print("Edad del gato: ${i} años, en humano es: ${humanAge(i.toDouble())}"); // metodo toDouble() transforma un entero a dato tipo double, en este caso como la funcion humanAge recibe un dato de tipo double debemos convertir la variable i (entero) a double
+    if(i == 7) break; // es una forma de romper el bucle y decirle que llegue hasta este punto donde se cumple dicha condicion
+  }
+
+  while( numero < 20 ){
+    print("$numero");
+    numero++;
+  }
+
+  do {
+    print("$numero");
+    numero++;
+  } while (numero < 20);
 }
