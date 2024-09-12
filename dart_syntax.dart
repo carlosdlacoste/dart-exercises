@@ -1,4 +1,19 @@
 
+String ageRange(String age){
+  switch(age){
+    case "Niño":
+      return "0-18";
+    case "Adulto":
+      return "18-60";
+    case "Anciano":
+      return "60+";
+      break;  // con break se termina el switch y se ejecuta el codigo que sigue al break
+    default:
+      return "Edad incorrecta";
+  }
+}
+
+
 String lifeAge(double age) {
   if(age < 18){
     return "Niño";
@@ -28,4 +43,5 @@ main(){
   double ageHuman = age * 7;
   print("Edad del gato: ${humanAge(6)}");  //cuando se va imprimir una funcion a diferencia de una variable se debe colocar el nombre de la funcion entre llaves luego del signo dolar
   print("Edad del gato: ${lifeAge(humanAge(6))}");
+  print("Niño: ${ageRange("Niño")}");
 }
