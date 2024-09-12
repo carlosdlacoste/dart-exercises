@@ -1,6 +1,7 @@
 import "animal.dart";
+import "humanAge.dart";
 
-class Cat extends Animal{
+class Cat extends Animal implements humanAge{  // una interfaz es un contrato entre clases que define un conjunto de métodos y propiedades que una clase debe implementar. Normalmente, se utiliza una clase abstracta para definir una interfaz.
   final String name; // la palabra reservada final se utiliza se utiliza para declarar variables que solo pueden ser asignadas una vez, es decir, su valor no se puede modificar
   Cat(this.name);  // Constructor de la clase gato
 
@@ -15,5 +16,10 @@ class Cat extends Animal{
   @override
   void makeSound() {
     print("Meow");
+  }
+  
+  @override
+  num calculate() { //implementacion propia de la clase Cat para el metodo calculate()
+    return age * 7;
   }
 }
